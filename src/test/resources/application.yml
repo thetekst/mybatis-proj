@@ -1,0 +1,26 @@
+logging.level:
+  root: WARN
+  sample.mybatis.mapper: TRACE
+
+
+mybatis:
+    configuration-properties:
+      db-var1: city
+      db-var2: city
+    type-aliases-package: com.example.domain.model
+    type-handlers-package: com.example.typehandler
+    configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 30
+
+# H2
+#spring.h2.console.enabled: true
+#spring.h2.console.path: /h2
+
+spring.datasource:
+  schema: classpath:import.sql
+#  driver-class-name: org.h2.Driver
+#  url: jdbc:h2:mem:db
+#  username: sa
+#  password:
